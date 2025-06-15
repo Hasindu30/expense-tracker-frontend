@@ -25,7 +25,7 @@ const SignUp = () => {
   const handleSignUp = async (e) =>{
     e.preventDefault();
 
-    let profileImgaeUrl = "";
+    let profileImageUrl = "";
 
     if (!fullName){
       setError("please enter your name");
@@ -45,13 +45,13 @@ const SignUp = () => {
 
       if (profilePic) {
         const imgUploadRes = await uploadImage(profilePic);
-        profileImgaeUrl = imgUploadRes.imageUrl || "";
+        profileImageUrl = imgUploadRes.imageUrl || "";
       }
       const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER,{
         fullName,
         email,
         password,
-        profileImgaeUrl
+        profileImageUrl
       });
 
       const {token,user} =response.data;
