@@ -6,6 +6,7 @@ import Home from './pages/Auth/Dashboard/Home'
 import Income from './pages/Auth/Dashboard/Income'
 import Expense from './pages/Auth/Dashboard/Expense'
 import UserProvider from './context/userContext'
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
@@ -22,6 +23,15 @@ const App = () => {
         </Routes>
       </Router>
     </div>
+
+    <Toaster
+      toastOptions={{
+        className:"",
+        style:{
+          fontSize:"13px"
+        },
+      }}
+      />
     </UserProvider>
   );
 };
