@@ -12,7 +12,7 @@ import RecentTransactions from '../../../components/dashbaord/RecentTransactions
 import FinanceOverView from '../../../components/dashbaord/FinanceOverView';
 import ExpenseTransactions from './ExpenseTransactions';
 import Last30DaysExpenses from '../../../components/dashbaord/last30DaysExpenses'
-import Last30DaysExpenses from '../../../components/dashbaord/last30DaysExpenses';
+
 
 const Home = () => {
   useUserAuth();
